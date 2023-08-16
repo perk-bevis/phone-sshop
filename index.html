@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIBI GAMING</title>
     <link rel="stylesheet" href="./assest/css/style.css">
+    <link rel="stylesheet" href="./assest/css/base.css">
     <link rel="shortcut icon" href="https://yt3.googleusercontent.com/BZzVMyNPLLE1qpxthtUs1KHFK_eNZuxk8-KK3d4YH6eNhUFZ5L08XfyK2xJoK3nyAZgr0mhzJHA=s900-c-k-c0x00ffffff-no-rj"  type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/static/css/syntax.css" />
 </head>
@@ -19,7 +20,7 @@
                 </div>
                 <div class="menu__header">
                     <nav>
-                        <ul class="nav__link">
+                        <ul class="nav__link" id="tabs-container">
                             <li><a href="">Trang chủ</a></li>
                             <li><a href="">Giới thiệu</a></li>
                             <li><a href="">Sản phẩm</a></li>
@@ -85,15 +86,13 @@
                 </style>
                 
 
-
-
                 <div class="card">
                     <div class="items">
                         <div class="image">
                             <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/h/photo_2022-09-28_21-58-51_3.jpg" alt="">
                         </div>
                         <div class="text">
-                            <h3>iPhone 14 512GB | Chính hãng VN/A</h3>
+                            <h3>iPhone 14 512GB | Genuine VN/A</h3>
                             <p>24.990.000 ₫</p>
                         </div>
                         <div class="color">
@@ -103,60 +102,32 @@
                             <span></span>
                         </div>
                         <div class="button">
-                            <a href="#" id="buyButton">Mua</a>
-                            <a href="#">Xem chi tiết</a>
-                        </div>
-                    </div>
+                            <a href="#" id="buyButton">Buy</a>
+                            <a href="#">View details</a>
+                        </div>        
                 </div>
-                
+
                 <div id="modal" class="modal">
                     <div class="modal-content">
-                        <h3>Lựa chọn của bạn</h3>
+                        <h3>Your choices</h3>
                         <div class="button-group">
+                            <input type="text" id="textproduct" class="input-quantity" placeholder="nhập tên sản phẩm">
                             <input type="number" id="quantity" class="input-quantity" placeholder="Số lượng">
-                            <button onclick="addToCart()" class="btn-add-to-cart">Thêm vào giỏ hàng</button>
+                            <button onclick="addToCart()" class="btn-add-to-cart">Add to cart</button>
                         </div>
-                        <div class="button-group">
-                            <button onclick="deleteItem()" class="btn-delete">Xóa</button>
-                            <button onclick="editItem()" class="btn-edit">Sửa</button>
-                        </div>
+                
+                        <!-- Thêm bảng vào đây -->
+                        <table class="table" id="cartTable">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>number</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                        </table>
                     </div>
                 </div>
-                
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton = document.getElementById("buyButton");
-                
-                    buyButton.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
-                
                 <div class="card" id="card1">
                     <div class="items">
                         <div class="image">
@@ -178,41 +149,6 @@
                        </div>
                     </div>
                 </div>
-                
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton1 = document.getElementById("buyButton1");
-                
-                    buyButton1.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    // Các hàm xử lý sự kiện addToCart, deleteItem, editItem ở trên
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 
 
                 <div class="card" id="card2">
@@ -236,39 +172,6 @@
                        </div>
                     </div>
                 </div>
-                
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton2 = document.getElementById("buyButton2");
-                
-                    buyButton2.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    // Các hàm xử lý sự kiện addToCart, deleteItem, editItem ở trên
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
-                
-
                 <div class="card" id="card3">
                     <div class="items">
                         <div class="image">
@@ -291,37 +194,6 @@
                     </div>
                 </div>
                 
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton3 = document.getElementById("buyButton3");
-                
-                    buyButton3.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    // Các hàm xử lý sự kiện addToCart, deleteItem, editItem ở trên
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
-                
                 <div class="card" id="card4">        
                     <div class="items">        
                         <div class="image">
@@ -343,42 +215,6 @@
                         </div>             
                     </div>
                 </div>
-
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton4 = document.getElementById("buyButton4");
-
-                    buyButton4.addEventListener("click", openModal);
-
-                    function openModal(event) {
-                            event.preventDefault();
-                            modal.style.display = "block";
-                    }
-
-                    function closeModal() {
-                            modal.style.display = "none";
-                    }
-
-                    function addToCart() {
-                            closeModal();
-                    // Xử lý logic thêm vào giỏ hàng
-                            console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-
-                    function deleteItem() {
-                            closeModal();
-                    // Xử lý logic xóa sản phẩm
-                            console.log("Sản phẩm đã bị xóa.");
-                    }
-
-                    function editItem() {
-                            closeModal();
-                    // Xử lý logic sửa thông tin sản phẩm
-                            console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
-
-
                 <div class="card" id="card5">
                     <div class="items">
                         <div class="image">
@@ -400,39 +236,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton5 = document.getElementById("buyButton5");
-
-                    buyButton5.addEventListener("click", openModal);
-
-                    function openModal(event) {
-                            event.preventDefault();
-                            modal.style.display = "block";
-                    }
-
-                    function closeModal() {
-                            modal.style.display = "none";
-                    }
-
-                    function addToCart() {
-                            closeModal();
-                    // Xử lý logic thêm vào giỏ hàng
-                            console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-
-                    function deleteItem() {
-                            closeModal();
-                    // Xử lý logic xóa sản phẩm
-                            console.log("Sản phẩm đã bị xóa.");
-                    }
-
-                    function editItem() {
-                            closeModal();
-                    // Xử lý logic sửa thông tin sản phẩm
-                            console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
 
                 
                 <div class="card" id ="card6">
@@ -456,39 +259,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton6 = document.getElementById("buyButton6");
-
-                    buyButton6.addEventListener("click", openModal);
-
-                    function openModal(event) {
-                            event.preventDefault();
-                            modal.style.display = "block";
-                    }
-
-                    function closeModal() {
-                            modal.style.display = "none";
-                    }
-
-                    function addToCart() {
-                            closeModal();
-                    // Xử lý logic thêm vào giỏ hàng
-                            console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-
-                    function deleteItem() {
-                            closeModal();
-                    // Xử lý logic xóa sản phẩm
-                            console.log("Sản phẩm đã bị xóa.");
-                    }
-
-                    function editItem() {
-                            closeModal();
-                    // Xử lý logic sửa thông tin sản phẩm
-                            console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card" id="card7">
                     <div class="items">
                         <div class="image">
@@ -510,39 +280,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton7 = document.getElementById("buyButton7");
-
-                    buyButton7.addEventListener("click", openModal);
-
-                    function openModal(event) {
-                            event.preventDefault();
-                            modal.style.display = "block";
-                    }
-
-                    function closeModal() {
-                            modal.style.display = "none";
-                    }
-
-                    function addToCart() {
-                            closeModal();
-                    // Xử lý logic thêm vào giỏ hàng
-                            console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-
-                    function deleteItem() {
-                            closeModal();
-                    // Xử lý logic xóa sản phẩm
-                            console.log("Sản phẩm đã bị xóa.");
-                    }
-
-                    function editItem() {
-                            closeModal();
-                    // Xử lý logic sửa thông tin sản phẩm
-                            console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card"id="card8">
                     <div class="items">
                         <div class="image">
@@ -564,39 +301,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton8 = document.getElementById("buyButton8");
-
-                    buyButton8.addEventListener("click", openModal);
-
-                    function openModal(event) {
-                            event.preventDefault();
-                            modal.style.display = "block";
-                    }
-
-                    function closeModal() {
-                            modal.style.display = "none";
-                    }
-
-                    function addToCart() {
-                            closeModal();
-                    // Xử lý logic thêm vào giỏ hàng
-                            console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-
-                    function deleteItem() {
-                            closeModal();
-                    // Xử lý logic xóa sản phẩm
-                            console.log("Sản phẩm đã bị xóa.");
-                    }
-
-                    function editItem() {
-                            closeModal();
-                    // Xử lý logic sửa thông tin sản phẩm
-                            console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card"id=card9>
                     <div class="items">
                         <div class="image">
@@ -618,39 +322,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton9 = document.getElementById("buyButton9");
-
-                    buyButton9.addEventListener("click", openModal);
-
-                    function openModal(event) {
-                            event.preventDefault();
-                            modal.style.display = "block";
-                    }
-
-                    function closeModal() {
-                            modal.style.display = "none";
-                    }
-
-                    function addToCart() {
-                            closeModal();
-                    // Xử lý logic thêm vào giỏ hàng
-                            console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-
-                    function deleteItem() {
-                            closeModal();
-                    // Xử lý logic xóa sản phẩm
-                            console.log("Sản phẩm đã bị xóa.");
-                    }
-
-                    function editItem() {
-                            closeModal();
-                    // Xử lý logic sửa thông tin sản phẩm
-                            console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
             </div>
         </div>
     </section>
@@ -684,39 +355,6 @@
                     </div>
                 </div>
 
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton10 = document.getElementById("buyButton10");
-                
-                    buyButton10.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card" id="card11">
                     <div class="items">
                         <div class="image">
@@ -740,39 +378,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton11 = document.getElementById("buyButton11");
-                
-                    buyButton11.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card" id="card12">
                     <div class="items">
                         <div class="image">
@@ -796,39 +401,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton12 = document.getElementById("buyButton12");
-                
-                    buyButton12.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card" id="card13">
                     <div class="items">
                         <div class="image">
@@ -852,39 +424,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton13 = document.getElementById("buyButton13");
-                
-                    buyButton13.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card" id="card14">
                     <div class="items">
                         <div class="image">
@@ -908,39 +447,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton14 = document.getElementById("buyButton14");
-                
-                    buyButton14.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card" id="card15">
                     <div class="items">
                         <div class="image">
@@ -964,39 +470,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton15 = document.getElementById("buyButton15");
-                
-                    buyButton15.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card" id="card16">
                     <div class="items">
                         <div class="image">
@@ -1020,39 +493,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton16 = document.getElementById("buyButton16");
-                
-                    buyButton16.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card" id="card17">
                     <div class="items">
                         <div class="image">
@@ -1076,39 +516,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton17 = document.getElementById("buyButton17");
-                
-                    buyButton17.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card" id="card18">
                     <div class="items">
                         <div class="image">
@@ -1132,39 +539,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton18 = document.getElementById("buyButton18");
-                
-                    buyButton18.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
                 <div class="card" id="card19">
                     <div class="items">
                         <div class="image">
@@ -1188,39 +562,6 @@
                        </div>
                     </div>
                 </div>
-                <script>
-                    var modal = document.getElementById("modal");
-                    var buyButton19 = document.getElementById("buyButton19");
-                
-                    buyButton19.addEventListener("click", openModal);
-                
-                    function openModal(event) {
-                        event.preventDefault();
-                        modal.style.display = "block";
-                    }
-                
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                
-                    function addToCart() {
-                        closeModal();
-                        // Xử lý logic thêm vào giỏ hàng
-                        console.log("Sản phẩm đã được thêm vào giỏ hàng.");
-                    }
-                
-                    function deleteItem() {
-                        closeModal();
-                        // Xử lý logic xóa sản phẩm
-                        console.log("Sản phẩm đã bị xóa.");
-                    }
-                
-                    function editItem() {
-                        closeModal();
-                        // Xử lý logic sửa thông tin sản phẩm
-                        console.log("Sản phẩm đã được sửa.");
-                    }
-                </script>
             </div>
         </div>
     </section>
@@ -1261,9 +602,6 @@
         </div>
         <p class="copyriht">WEBSITE DESIGN BY BIBI GAMING</p>
     </footer>
-
-
-
-
+    <script src="./main.js"></script>
 </body>
 </html>
