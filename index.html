@@ -79,6 +79,27 @@
                                     <a href="#">Xem Chi Tiết</a>
                                 </div> 
                             </div>
+                            <div id="modal" class="modal">
+                                <div class="modal-content">
+                                    <h3>Lựa Chọn Của Bạn</h3>
+                                    <div class="button-group">
+                                        <input type="text" id="textproduct" class="input-quantity" placeholder="nhập tên sản phẩm">
+                                        <input type="number" id="quantity" class="input-quantity" placeholder="Số lượng">
+                                        <button onclick="addToCart()" class="btn-add-to-cart">Thêm Vào Giỏ</button>
+                                    </div>
+                            
+                                    <!-- Thêm bảng vào đây -->
+                                    <table class="table" id="cartTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>number</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                        
                         <div class="card " id="card1">
@@ -99,27 +120,6 @@
                                 <div class="button">
                                     <a href="#" id="buyButton1">Mua</a>
                                     <a href="#">Xem chi tiết</a>
-                                </div>
-                            </div>
-                            <div id="modal" class="modal">
-                                <div class="modal-content">
-                                    <h3>Lựa Chọn Của Bạn</h3>
-                                    <div class="button-group">
-                                        <input type="text" id="textproduct" class="input-quantity" placeholder="nhập tên sản phẩm">
-                                        <input type="number" id="quantity" class="input-quantity" placeholder="Số lượng">
-                                        <button onclick="addToCart()" class="btn-add-to-cart">Thêm Vào Giỏ</button>
-                                    </div>
-                            
-                                    <!-- Thêm bảng vào đây -->
-                                    <table class="table" id="cartTable">
-                                        <thead>
-                                            <tr>
-                                                <th>Product</th>
-                                                <th>number</th>
-                                                <th>Actions</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
                                 </div>
                             </div>
                         </div>
