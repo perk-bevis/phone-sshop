@@ -59,7 +59,7 @@
             <div class="grid">
                 <div class="grid-row">
                     <div class="show_product">
-                        <div class="card">
+                        <div class="card ">
                             <div class="items">
                                 <div class="image">
                                     <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/h/photo_2022-09-28_21-58-51_3.jpg" alt="">
@@ -75,33 +75,13 @@
                                     <span></span>
                                 </div>
                                 <div class="button">
-                                    <a href="#" id="buyButton">Mua</a>
-                                    <a href="#">Xem Thêm</a>
+                                    <a href="#" id="buyButton" class="buybtn">Mua</a>
+                                    <a href="#">Xem Chi Tiết</a>
                                 </div> 
                             </div>
-                            <div id="modal" class="modal">
-                                <div class="modal-content">
-                                    <h3>Your choices</h3>
-                                    <div class="button-group">
-                                        <input type="text" id="textproduct" class="input-quantity" placeholder="nhập tên sản phẩm">
-                                        <input type="number" id="quantity" class="input-quantity" placeholder="Số lượng">
-                                        <button onclick="addToCart()" class="btn-add-to-cart">Add to cart</button>
-                                    </div>
-                            
-                                    <!-- Thêm bảng vào đây -->
-                                    <table class="table" id="cartTable">
-                                        <thead>
-                                            <tr>
-                                                <th>Product</th>
-                                                <th>number</th>
-                                                <th>Actions</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                </div>
-                            </div>
                         </div>
-                        <div class="card" id="card1">
+                       
+                        <div class="card " id="card1">
                             <div class="items">
                                 <div class="image">
                                     <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/298377/samsung-galaxy-a34-5g-bac-thumb-200x200.jpg" alt="">
@@ -121,8 +101,29 @@
                                     <a href="#">Xem chi tiết</a>
                                 </div>
                             </div>
+                            <div id="modal" class="modal">
+                                <div class="modal-content">
+                                    <h3>Lựa Chọn Của Bạn</h3>
+                                    <div class="button-group">
+                                        <input type="text" id="textproduct" class="input-quantity" placeholder="nhập tên sản phẩm">
+                                        <input type="number" id="quantity" class="input-quantity" placeholder="Số lượng">
+                                        <button onclick="addToCart()" class="btn-add-to-cart">Thêm Vào Giỏ</button>
+                                    </div>
+                            
+                                    <!-- Thêm bảng vào đây -->
+                                    <table class="table" id="cartTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>number</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card" id="card2">
+                        <div class="card " id="card2">
                             <div class="items">
                                 <div class="image">
                                     <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/285082/oppo-a57-128gb-200722-044746-200x200.jpg" alt="">
@@ -143,7 +144,7 @@
                                </div>
                             </div>
                         </div>
-                        <div class="card" id="card3">
+                        <div class="card product-card" id="card3">
                             <div class="items">
                                 <div class="image">
                                     <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/303298/xiaomi-redmi-note-12-4g-mono-xanh-200x200.jpg" alt="">
@@ -164,7 +165,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card" id="card4">        
+                        <div class="card " id="card4">        
                             <div class="items">        
                                 <div class="image">
                                     <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-xanhla-200x200.jpg" alt="">        
@@ -185,7 +186,7 @@
                                 </div>             
                             </div>
                         </div>
-                        <div class="card" id="card5">
+                        <div class="card" id="card product-card5">
                             <div class="items">
                                 <div class="image">
                                     <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/303575/xiaomi-redmi-12c-green-thumb-200x200.jpg" alt="">
