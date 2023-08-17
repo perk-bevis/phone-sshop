@@ -56,515 +56,491 @@
     <section class="body_product">
         <div class="container">
             <div class="title"><h3>Sản phẩm bán chạy</h3></div>
-            <div class="show_product">
-                <style>
-                    .modal {
-                        display: none;
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0, 0, 0, 0.5);
-                        z-index: 9999;
-                    }
-                
-                    .modal-content {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background-color: #fff;
-                        padding: 20px;
-                        border-radius: 5px;
-                        text-align: center;
-                    }
-                
-                    .modal-content button {
-                        margin: 10px;
-                    }
-                </style>
-                
-
-                <div class="card">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/h/photo_2022-09-28_21-58-51_3.jpg" alt="">
+            <div class="grid">
+                <div class="grid-row">
+                    <div class="show_product">
+                        <div class="card">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/h/photo_2022-09-28_21-58-51_3.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>iPhone 14 512GB | Genuine VN/A</h3>
+                                    <p>24.990.000 ₫</p>
+                                </div>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="button">
+                                    <a href="#" id="buyButton">Mua</a>
+                                    <a href="#">Xem Thêm</a>
+                                </div> 
+                            </div>
+                            <div id="modal" class="modal">
+                                <div class="modal-content">
+                                    <h3>Your choices</h3>
+                                    <div class="button-group">
+                                        <input type="text" id="textproduct" class="input-quantity" placeholder="nhập tên sản phẩm">
+                                        <input type="number" id="quantity" class="input-quantity" placeholder="Số lượng">
+                                        <button onclick="addToCart()" class="btn-add-to-cart">Add to cart</button>
+                                    </div>
+                            
+                                    <!-- Thêm bảng vào đây -->
+                                    <table class="table" id="cartTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>number</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h3>iPhone 14 512GB | Genuine VN/A</h3>
-                            <p>24.990.000 ₫</p>
+                        <div class="card" id="card1">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/298377/samsung-galaxy-a34-5g-bac-thumb-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Điện thoại Samsung Galaxy A34 5G 256GB</h3>
+                                    <p>9.490.000₫</p>
+                                </div>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="button">
+                                    <a href="#" id="buyButton1">Mua</a>
+                                    <a href="#">Xem chi tiết</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div class="card" id="card2">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/285082/oppo-a57-128gb-200722-044746-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Điện thoại OPPO A57 128GB</h3>
+                                    <p>4.590.000₫</p>
+                                </div>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton2">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                        <div class="button">
-                            <a href="#" id="buyButton">Buy</a>
-                            <a href="#">View details</a>
-                        </div>        
-                </div>
-
-                <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <h3>Your choices</h3>
-                        <div class="button-group">
-                            <input type="text" id="textproduct" class="input-quantity" placeholder="nhập tên sản phẩm">
-                            <input type="number" id="quantity" class="input-quantity" placeholder="Số lượng">
-                            <button onclick="addToCart()" class="btn-add-to-cart">Add to cart</button>
+                        <div class="card" id="card3">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/303298/xiaomi-redmi-note-12-4g-mono-xanh-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Điện thoại Xiaomi Redmi Note 12 8GB</h3>
+                                    <p>5.490.000₫</p>
+                                </div>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="button">
+                                    <a href="#" id="buyButton3">Mua</a>
+                                    <a href="#">Xem chi tiết</a>
+                                </div>
+                            </div>
                         </div>
-                
-                        <!-- Thêm bảng vào đây -->
-                        <table class="table" id="cartTable">
-                            <thead>
-                                <tr>
-                                    <th>Product</th>
-                                    <th>number</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-                <div class="card" id="card1">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/298377/samsung-galaxy-a34-5g-bac-thumb-200x200.jpg" alt="">
+                        <div class="card" id="card4">        
+                            <div class="items">        
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-xanhla-200x200.jpg" alt="">        
+                                </div>             
+                                <div class="text">
+                                    <h3>Điện thoại iPhone 11 64GB</h3>             
+                                    <p>10.290.000₫</p>        
+                                </div>        
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>        
+                                </div>        
+                                <div class="button">
+                                    <a href="#" id="buyButton4">Mua</a>
+                                    <a href="#">Xem chi tiết</a>        
+                                </div>             
+                            </div>
                         </div>
-                        <div class="text">
-                            <h3>Điện thoại Samsung Galaxy A34 5G 256GB</h3>
-                            <p>9.490.000₫</p>
+                        <div class="card" id="card5">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/303575/xiaomi-redmi-12c-green-thumb-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Điện thoại Xiaomi Redmi 12C 64GB </h3>
+                                    <p>2.850.000₫</p>
+                                </div>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#"id="buyButton5">MUA</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div class="card" id ="card6">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-bac-thumb-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Điện thoại iPhone 14 Pro Max 128GB</h3>
+                                    <p>27.090.000₫</p>
+                                </div>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton6">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                       <div class="button">
-                        <a href="#" id="buyButton1">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                
-
-                <div class="card" id="card2">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/285082/oppo-a57-128gb-200722-044746-200x200.jpg" alt="">
+                        <div class="card" id="card7">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/4/_/4_187_1.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>iPhone 11 128GB I Chính hãng VN/A</h3>
+                                    <p>12.050.000 ₫</p>
+                                </div>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton7">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h3>Điện thoại OPPO A57 128GB</h3>
-                            <p>4.590.000₫</p>
+                        <div class="card"id="card8">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/303583/samsung-galaxy-a34-5g-bac-thumb-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Samsung Galaxy A34 5G 8GB 128GB</h3>
+                                    <p>8.490.000 </p>
+                                </div>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton8">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div class="card"id=card9>
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/282903/xiaomi-13-pro-thumb-1-2-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Điện thoại Xiaomi 13 Pro 5G</h3>
+                                    <p>23.790.000₫</p>
+                                </div>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton9">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                       <div class="button">
-                        <a href="#" id="buyButton2">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card" id="card3">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/303298/xiaomi-redmi-note-12-4g-mono-xanh-200x200.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>Điện thoại Xiaomi Redmi Note 12 8GB</h3>
-                            <p>5.490.000₫</p>
-                        </div>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="button">
-                            <a href="#" id="buyButton3">Mua</a>
-                            <a href="#">Xem chi tiết</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card" id="card4">        
-                    <div class="items">        
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-xanhla-200x200.jpg" alt="">        
-                        </div>             
-                        <div class="text">
-                            <h3>Điện thoại iPhone 11 64GB</h3>             
-                            <p>10.290.000₫</p>        
-                        </div>        
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>        
-                        </div>        
-                        <div class="button">
-                            <a href="#" id="buyButton4">Mua</a>
-                            <a href="#">Xem chi tiết</a>        
-                        </div>             
-                    </div>
-                </div>
-                <div class="card" id="card5">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/303575/xiaomi-redmi-12c-green-thumb-200x200.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>Điện thoại Xiaomi Redmi 12C 64GB </h3>
-                            <p>2.850.000₫</p>
-                        </div>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#"id="buyButton5">MUA</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-
-                
-                <div class="card" id ="card6">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-bac-thumb-200x200.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>Điện thoại iPhone 14 Pro Max 128GB</h3>
-                            <p>27.090.000₫</p>
-                        </div>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#" id="buyButton6">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card" id="card7">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/4/_/4_187_1.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>iPhone 11 128GB I Chính hãng VN/A</h3>
-                            <p>12.050.000 ₫</p>
-                        </div>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#" id="buyButton7">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card"id="card8">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/303583/samsung-galaxy-a34-5g-bac-thumb-200x200.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>Samsung Galaxy A34 5G 8GB 128GB</h3>
-                            <p>8.490.000 </p>
-                        </div>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#" id="buyButton8">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card"id=card9>
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/282903/xiaomi-13-pro-thumb-1-2-200x200.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>Điện thoại Xiaomi 13 Pro 5G</h3>
-                            <p>23.790.000₫</p>
-                        </div>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#" id="buyButton9">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
     <!-- end Body product one -->
      <!-- Body product discount -->
-     <section class="body_product discount">
+    <section class="body_product discount">
         <div class="container">
             <div class="title"><h3>Sản phẩm khuyến mãi</h3></div>
-            <div class="show_product">
-                <div class="card" id="card10">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/239748/nokia-c30-xam-1-200x200.jpg" alt="">
+            <div class="grid">
+                <div class="grid-row">
+                    <div class="show_product">
+                        <div class="card" id="card10">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/239748/nokia-c30-xam-1-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Điện thoại Nokia C30</h3>
+                                    <span><s>3.350.000₫</s></span>
+                                    <span>1.950.000₫</span>
+                                </div>
+                                <span class="discount">-41%</span>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton10">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h3>Điện thoại Nokia C30</h3>
-                            <span><s>3.350.000₫</s></span>
-                            <span>1.950.000₫</span>
+        
+                        <div class="card" id="card11">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/1/3/13_prooo.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Điện thoại Xiaomi 13 Pro 5G</h3>
+                                    <span><s> 2.190.000₫ </s></span>
+                                    <span>1.880.000₫</span>
+                                </div>
+                                <span class="discount">-20%</span>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton11">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                        <span class="discount">-41%</span>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div class="card" id="card12">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/247364/samsung-galaxy-m53-xanh-la-thumb-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Samsung Galaxy M53</h3>
+                                    <span><s>10.990.000₫</s></span>
+                                    <span>8.290.000₫</span>
+                                </div>
+                                <span class="discount">-24%</span>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton12">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                       <div class="button">
-                        <a href="#" id="buyButton10">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-
-                <div class="card" id="card11">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/1/3/13_prooo.jpg" alt="">
+                        <div class="card" id="card13">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/250622/oppo-find-x5-pro-trang-thumb-200x200.jpg" alt="">    
+                                </div>
+                                <div class="text">
+                                    <h3>OPPO Find X5 Pro 5G</h3>
+                                    <span><s>32.990.000₫</s></span>
+                                    <span>24.990.000₫</span>
+                                </div>
+                                <span class="discount">-24%</span>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton13">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h3>Điện thoại Xiaomi 13 Pro 5G</h3>
-                            <span><s> 2.190.000₫ </s></span>
-                            <span>1.880.000₫</span>
+                        <div class="card" id="card14">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://cdn.hoanghamobile.com/i/productlist/dsp/Uploads/2022/02/09/image-removebg-preview-11.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Samsung Galaxy S22 Ultra (8GB - 128GB)</h3>
+                                    <span><s>30.990.000₫</s></span>
+                                    <span>22.990.000 ₫</span>
+                                </div>
+                                <span class="discount">26%</span>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton14">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                        <span class="discount">-20%</span>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div class="card" id="card15">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-xanh-la-thumb-2-1-1-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Điện thoại iPhone 13 128GB </h3>
+                                    <span><s> 18.990.000₫ </s></span>
+                                    <span>17.190.000₫ </span>
+                                </div>
+                                <span class="discount">-9%</span>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton15">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                       <div class="button">
-                        <a href="#" id="buyButton11">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card" id="card12">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/247364/samsung-galaxy-m53-xanh-la-thumb-200x200.jpg" alt="">
+                        <div class="card" id="card16">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/301642/oppo-reno8-t-5g-256gb-250123-075345-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>OPPO RENO8 T 256GB Chính Hãng</h3>
+                                    <span><s>8.490.000 ₫</s></span>
+                                    <span>7.550.000 ₫</span>
+                                </div>
+                                <span class="discount">-10%</span>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton16">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h3>Samsung Galaxy M53</h3>
-                            <span><s>10.990.000₫</s></span>
-                            <span>8.290.000₫</span>
+                        <div class="card" id="card17">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://energizer.dtr.vn/cache/upload/auto/Spec_UE2001001.jpg-500x350.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Pin sạc dự phòng Energizer 20.000mAh /3.7V Li-Polymer UE20010</h3>
+                                    <span><s>850.000 ₫</s></span>
+                                    <span>550.000 ₫</span>
+                                </div>
+                                <span class="discount">35%</span>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton17">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                        <span class="discount">-24%</span>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div class="card" id="card18">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://cdn.hoanghamobile.com/i/productlist/dsp/Uploads/2022/02/09/image-removebg-preview-7.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Samsung Galaxy S22 (8GB - 128GB)</h3>
+                                    <span>21.990.000<s></s></span>
+                                    <span>15.990.000</span>
+                                </div>
+                                <span class="discount">20%</span>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton18">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                       <div class="button">
-                        <a href="#" id="buyButton12">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card" id="card13">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/250622/oppo-find-x5-pro-trang-thumb-200x200.jpg" alt="">    
+                        <div class="card" id="card19">
+                            <div class="items">
+                                <div class="image">
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/271697/Galaxy-S22-Ultra-Black-200x200.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Samsung Galaxy S22 Ultra (12GB - 256GB) - Độc quyền</h3>
+                                    <span><s>33.990.000 ₫</s></span>
+                                    <span>22.290.000 ₫</span>
+                                </div>
+                                <span class="discount">37%</span>
+                                <div class="color">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                               <div class="button">
+                                <a href="#" id="buyButton19">Mua</a>
+                                <a href="#">Xem chi tiết</a>
+                               </div>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h3>OPPO Find X5 Pro 5G</h3>
-                            <span><s>32.990.000₫</s></span>
-                            <span>24.990.000₫</span>
-                        </div>
-                        <span class="discount">-24%</span>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#" id="buyButton13">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card" id="card14">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://cdn.hoanghamobile.com/i/productlist/dsp/Uploads/2022/02/09/image-removebg-preview-11.png" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>Samsung Galaxy S22 Ultra (8GB - 128GB)</h3>
-                            <span><s>30.990.000₫</s></span>
-                            <span>22.990.000 ₫</span>
-                        </div>
-                        <span class="discount">26%</span>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#" id="buyButton14">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card" id="card15">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-xanh-la-thumb-2-1-1-200x200.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>Điện thoại iPhone 13 128GB </h3>
-                            <span><s> 18.990.000₫ </s></span>
-                            <span>17.190.000₫ </span>
-                        </div>
-                        <span class="discount">-9%</span>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#" id="buyButton15">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card" id="card16">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/301642/oppo-reno8-t-5g-256gb-250123-075345-200x200.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>OPPO RENO8 T 256GB Chính Hãng</h3>
-                            <span><s>8.490.000 ₫</s></span>
-                            <span>7.550.000 ₫</span>
-                        </div>
-                        <span class="discount">-10%</span>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#" id="buyButton16">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card" id="card17">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://energizer.dtr.vn/cache/upload/auto/Spec_UE2001001.jpg-500x350.png" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>Pin sạc dự phòng Energizer 20.000mAh /3.7V Li-Polymer UE20010</h3>
-                            <span><s>850.000 ₫</s></span>
-                            <span>550.000 ₫</span>
-                        </div>
-                        <span class="discount">35%</span>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#" id="buyButton17">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card" id="card18">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://cdn.hoanghamobile.com/i/productlist/dsp/Uploads/2022/02/09/image-removebg-preview-7.png" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>Samsung Galaxy S22 (8GB - 128GB)</h3>
-                            <span>21.990.000<s></s></span>
-                            <span>15.990.000</span>
-                        </div>
-                        <span class="discount">20%</span>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#" id="buyButton18">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
-                    </div>
-                </div>
-                <div class="card" id="card19">
-                    <div class="items">
-                        <div class="image">
-                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/271697/Galaxy-S22-Ultra-Black-200x200.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>Samsung Galaxy S22 Ultra (12GB - 256GB) - Độc quyền</h3>
-                            <span><s>33.990.000 ₫</s></span>
-                            <span>22.290.000 ₫</span>
-                        </div>
-                        <span class="discount">37%</span>
-                        <div class="color">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="button">
-                        <a href="#" id="buyButton19">Mua</a>
-                        <a href="#">Xem chi tiết</a>
-                       </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
     <!-- end Body product discount -->
     <footer>
         <div class="container">
