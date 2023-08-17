@@ -1,9 +1,15 @@
 var modal = document.getElementById("modal");
+var buyButtons = document.querySelectorAll("[id^='buyButton']");
 var buyButton = document.getElementById("buyButton");
+// var buyButtonAll = document.querySelectorAll("buybtn");
 var quantityInput = document.getElementById("quantity");
 var productInput = document.getElementById("textproduct");
 var cartTable = document.getElementById("cartTable");
-buyButton.addEventListener("click", openModal);
+// buyButton.addEventListener("click", openModal);
+buyButtons.forEach(button => {
+    button.addEventListener("click", openModal);
+});
+
 function openModal(event) {
     event.preventDefault();
     modal.style.display = "block";
