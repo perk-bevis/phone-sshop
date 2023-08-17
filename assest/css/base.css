@@ -1,0 +1,28 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(41.6667% - 24px); /* Điều chỉnh tính toán chiều rộng */
+    box-sizing: border-box; /* Bao gồm padding trong tính toán chiều rộng */
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px; /* Lùi lại để bù đắp cho padding của cột */
+    margin-right: -12px; /* Lùi lại để bù đắp cho padding của cột */
+}
